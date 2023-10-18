@@ -1,0 +1,18 @@
+--- # two task file
+
+- hosts: webservers
+  become: yes
+  user: ansible
+  connection: ssh
+
+
+  tasks:
+    - name: service httpd stop
+      service:
+        name: httpd
+        state: stopped
+
+    - name: removing httpd s/w
+      yum:
+        name: httpd
+        state: absent

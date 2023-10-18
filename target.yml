@@ -1,0 +1,7 @@
+--- # This is target file
+
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+

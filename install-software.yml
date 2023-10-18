@@ -1,0 +1,12 @@
+--- # inatall java
+
+- hosts: webservers
+  become: yes
+  user: ansible
+  connection: ssh
+  tasks:
+
+    - name: install java
+      yum:
+        name: java
+        state: present

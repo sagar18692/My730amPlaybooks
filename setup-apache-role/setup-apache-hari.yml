@@ -1,0 +1,9 @@
+---
+
+- name: install apache
+  hosts: webservers
+  become: yes
+  connection: ssh
+
+  roles:
+    - role: /home/ansible/setup-apache-role

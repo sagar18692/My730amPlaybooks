@@ -1,0 +1,12 @@
+--- #create user
+
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+
+    - name: creating user on webservers
+      user: 
+         name: pawan
+         state: present

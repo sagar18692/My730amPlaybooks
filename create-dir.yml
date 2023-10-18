@@ -1,0 +1,12 @@
+--- # creating directory
+
+- hosts: webservers
+  user: ansible
+  connection: ssh
+  become: yes
+  tasks:
+
+    - name: creating a folder
+      file:
+        path: /home/ansible/haridir
+        state: directory

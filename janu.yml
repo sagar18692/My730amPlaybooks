@@ -1,0 +1,19 @@
+--- # Janu playbook
+
+- hosts: webservers
+  user: ansible
+  connection: ssh
+  become: yes
+
+  tasks:
+    - name: remove tree from webservers
+      yum:
+        name: tree
+        state: absent
+
+    - name: remove httpd from webervers
+      yum:
+        name: httpd
+        state: absent
+
+

@@ -1,0 +1,12 @@
+--- # instal multiple pkgs
+
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: install multiple pkgs
+      yum:
+        name: ['git','httpd','docker','which','java','wget','tree','mysql']
+        state: installed

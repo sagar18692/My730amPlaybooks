@@ -1,0 +1,12 @@
+--- # deleting file
+
+- hosts: webservers
+  user: ansible
+  connection: ssh
+  become: yes
+  tasks: 
+
+    - name: deleting file
+      file:
+        path: /home/ansible/gitfile
+        state: absent

@@ -1,0 +1,38 @@
+--- # create multiple users
+
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: create multiple users
+      user:
+        name: shubham
+        state: present
+
+    - name: create multiple users
+      user:
+        name: akshay
+        state: present
+
+    - name: create multiple users
+      user:
+        name: aniket
+        state: present
+
+    - name: create multiple users
+      user:
+        name: yash
+        state: present
+
+    - name: create multiple users
+      user:
+        name: janu
+        state: present
+
+    - name: create multiple users
+      user:
+        name: bhagyashri
+        state: present
+

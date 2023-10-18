@@ -1,0 +1,12 @@
+--- # copy file from serve to hosts
+
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+
+    - name: copy file from server to host1,host2
+      copy:
+        src: /home/ansible/index.html
+        dest: /home/ansible/ 
